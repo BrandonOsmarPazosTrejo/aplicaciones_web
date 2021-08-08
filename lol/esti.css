@@ -1,0 +1,89 @@
+body{
+    background-color: black;
+}
+h1{
+    color:  white;
+    background: black;
+    text-align: center;
+    border-bottom: 10px;
+}
+.form{
+    position: relative;
+    width: 1000px;
+    height: auto px;
+    padding-left: 30px;
+    padding-top: 15px;
+    background-color: rgb(134, 134, 134);
+    border-radius: 20px;
+    margin: auto;
+}
+
+input[type=text],[type=email]{
+    width: 470px;
+    height: 35px;
+    font: 14px normal normal uppercase helvetica, arial, serif;
+}
+
+textarea{
+    width: 470px;
+    height: 110px;
+    font: 14px normal normal uppercase helvetica, arial, serif
+}
+
+input[type=submit]{
+    position: relative;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 150px;
+    border: 0px;
+    background-color: rgb(255, 255, 255);
+    font: 14px normal normal uppercase helvetica, arial, serif
+}
+
+p{
+    text-shadow: 0 1px 0 #fff;
+    font-size: 24px;
+}
+
+label{
+    margin: 11px 20px 0 0;
+    font-size: 16px;
+    color:rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px #fff;
+}
+nav ul li a{
+    text-decoration: none;
+    color:inherit;
+}
+nav ul li{
+    padding: 0px;
+    margin: 0px;
+}
+nav ul li {
+    padding: 8px;
+    margin: 4px;
+    list-style-type: none;
+    float: left;
+    background: rgb(43, 226, 226);
+    color: rgb(5, 5, 5);
+    text-transform: uppercase;
+    width: 70px;
+    font-size: 10p;
+    text-align: center;
+    transition: all 1s;
+}
+.clearfix{
+    clear:both;
+}
+nav ul li:first-child {
+    border-radius: 15px 0px 0px 15px;
+}
+nav ul li:last-child{
+    border-radius: 0px 15px 15px 0px;
+}
+nav ul li:hover{
+    background: rgb(0, 0, 0);
+    color:rgb(43, 226, 226);
+}
