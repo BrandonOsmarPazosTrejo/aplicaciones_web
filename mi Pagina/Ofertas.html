@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<body><h1> Ofertas de OSMAR COMPANY</h1><body>
+		<nav>
+			<!--para indicar que es un menu de navegacion -->
+			<ul>
+				<li><a href="company.html">Inicio</a></li>
+				<li><a href="Ofertas.html"> Ofertas</a></li>
+				<li><a href="compras.html">Compras</a></li>
+				<li><a href="http://localhost/lol/nuevo.html">Registro</a></li>   
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+	<style>
+		html,body{ background-color: rgb(110, 106, 106);}
+		main{height: 100%}
+		header{height: 300px;}
+		section article{
+			width: 200px;
+			height: 200px;
+			float: left;
+			/*border: 1px solid white;*/
+		
+			position: relative;
+			margin: 4px;
+			transform: scale(1,1);
+			z-index: 1;
+			transition: all 1s;
+		}
+		@font-face{
+			font-family: Christmas Classically;
+			src: url("fuente/Christmas Classically.otf");
+		}
+		h1,h2{
+			font-family: Baby Rose;
+			font-size: 75px;
+		}
+		p{
+			font-family: Baby Rose;
+			font-size: 35px;
+		}
+
+		h6{
+			font-family: Baby Rose;
+			font-size: 20px;
+		}
+		nav ul li a{
+			text-decoration: none;
+			color:inherit;
+		}
+		nav ul li{
+			padding: 0px;
+			margin: 0px;
+		}
+		nav ul li {
+
+			padding: 10px;
+			margin: 6px;
+			list-style-type: none;
+			float: left;
+			background: rgb(0, 0, 0);
+			color: rgb(92, 0, 0);
+			text-transform: uppercase;
+			width: 70px;
+			font-size: 10p;
+			text-align: center;
+			transition: all 1s;
+		}
+		.clearfix{
+			clear: both;
+		}
+		nav ul li:first-child {
+			border-radius: 15px 0px 0px 15px;
+		}
+		nav ul li:last-child{
+			border-radius: 0px 15px 15px 0px;
+		}
+		nav ul li:hover{
+			background: rgb(0, 0, 0);
+			color:rgb(92, 0, 0);
+			nav-index: center;
+		}
+		section article img{
+			width: 100%;
+			position: auto;
+			top: 130px;
+			left: 1px;
+		}
+		section article h3,section article h4, section article p{
+			position: absolute;
+		}
+		.aumentado{
+			z-index: 1000;
+			transform: scale(1.4,1.4);
+			border: 1px solid rgb(129, 1, 1);
+			box-shadow: 15px 15px 15px 15px rgb(3, 236, 3);
+		}
+		section{
+			padding-top: 50px;
+			width: 200%;
+			height: 300px;
+			overflow: hidden;
+
+		}
+		section .ribbon{
+			width: 4000px;
+			position: relative;
+			left: 0px;
+			transition: all 1s;
+		}
+		.botonredondo{
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			background: rgb(128, 125, 125);
+			color: rgb(0, 0, 0);
+			font-size: 30px;
+			text-align: center;
+			line-height: 30px;
+			font-weight: bold;
+			position: absolute;
+		}
+		.botones{
+			width: 100%;
+			position: absolute;
+			z-index: 1000; /*para traer los botones al frente*/
+		}
+		.anterior{
+			top: 100px;
+			transform: rotate(180deg);
+		}
+		.posterior{
+			right: 20px;
+			top: 100px;
+		}
+		p{
+			background-color: transparent;
+			text-align: center;
+			color:rgb(0, 0, 0);
+		}
+		h1{
+	  		background-color: rgb(0, 0, 0);
+		    text-align: center;
+		    line-height: 100px;
+		    color:  rgb(255, 255, 255);
+		    border-bottom: 3px ;
+		    font-size: 4em;
+		    padding: 0.5cm;
+		}
+
+	</style>
+	<script src="lib/jquery-3.6.0.min.js">
+		
+	</script>
+	<script>
+		var desfase = 0; //esto lo hago al final de poner el .ribbon.css
+		$(document).ready(function(){
+			$("section article").hover (function(){
+			$(this).addClass("aumentado")	
+			})
+			$("section article").mouseout (function(){
+			$(this).removeClass("aumentado")	
+			})
+			$(".anterior").click (function(){
+				//console.log("Izquierdo"); primero lo pruebo asi y despues modifico en el ribbon:position,left, transition.
+				desfase--;
+				$(".ribbon").css("left",(desfase*200)+"px")
+			})
+			$(".posterior").click (function(){
+				//console.log("Derecho");
+				desfase++;
+				//$(".ribbon").css("left","200px")
+				$(".ribbon").css("left",(desfase*200)+"px")
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<main>
+		
+		<div id="container">
+			<section>
+				<div class="botones">
+					<div class="botonredondo anterior">
+						>	
+					</div>
+					<div class="botonredondo posterior">
+						>
+					</div>
+				</div>
+				<div class="ribbon">	
+				<article>
+				    <div class="contenido">
+						<img src="img2/img1.jpg">
+				    </div>
+				</article>
+				<article>
+					<div class="contenido">
+						<a href="https://www.youtube.com/watch?v=rHzbvx35v_A">
+						<img src="img2/img2.jpg">
+					</div>
+				</article>
+				<article>
+					<div class="contenido">
+						<a href="https://www.youtube.com/watch?v=rHzbvx35v_A">
+						<img src="img2/img3.jpg">
+				    </div>
+				</article>
+				<article>
+					<div class="contenido">
+						<a href="https://www.youtube.com/watch?v=rHzbvx35v_A">
+						<img src="img2/img7.jpg">
+					</div>
+				</article>
+				<article>
+					<div class="contenido">
+						<a href="https://www.youtube.com/watch?v=rHzbvx35v_A">
+						<img src="img2/img4.jpg">
+					</div>
+				</article>
+				<article>
+					<div class="contenido">
+						<a href="https://www.youtube.com/watch?v=rHzbvx35v_A">
+						<img src="img2/img5.jpg">
+					</div>
+				</article>
+				<article>
+					<div class="contenido">
+						<a href="https://www.youtube.com/watch?v=rHzbvx35v_A">
+						<img src="img2/img6.jpg">
+					</div>
+				</article>
+				<article>
+					<div class="contenido">
+						<a href="https://www.youtube.com/watch?v=rHzbvx35v_A">
+						<img src="img2/img8.jpg">
+					</div>
+				</article>
+				</div>
+			</section>
+       </div>
+
+	</main>
+<H4>LOS ARTUCULOS QUE SE MUESTRAN SON LOS QUE SE ENCUENTRAN EN OFERTA CADA MES SE MODIFICAN LAS OFERTAS</H4>
+</body>
+</html>
